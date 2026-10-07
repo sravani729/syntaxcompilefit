@@ -131,3 +131,11 @@ body{background:radial-gradient(circle at 88% -10%,rgba(200,245,106,.16),transpa
 :root[data-theme="dark"] .editor-panel{box-shadow:0 18px 38px rgba(0,21,41,.4)}:root[data-theme="dark"] .editor-panel:focus-within{box-shadow:0 22px 48px rgba(0,21,41,.5),0 0 0 2px rgba(118,199,255,.28)}
 :root[data-theme="dark"] .code-result{background:#1c3a50;border-color:#356884}:root[data-theme="dark"] .result-check{background:#76c7ff;color:#082033}
 :root[data-theme="dark"] .console-success{color:#76c7ff}:root[data-theme="dark"] .console-top button.selected{color:#76c7ff}:root[data-theme="dark"] .console-top button.selected:after{background:#76c7ff}:root[data-theme="dark"] .console-top button i{background:#76c7ff}
+
+/* Landing-page light-surface contrast */
+:root:not([data-theme="dark"]) .home-page .public-nav nav button,
+:root:not([data-theme="dark"]) .home-page .nav-login,
+:root:not([data-theme="dark"]) .home-page .btn-ghost{color:#17251e}
+:root:not([data-theme="dark"]) .home-page .public-nav nav button:hover,
+:root:not([data-theme="dark"]) .home-page .nav-login:hover,
+:root:not([data-theme="dark"]) .home-page .btn-ghost:hover{color:#0b1710}
