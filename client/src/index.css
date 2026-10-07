@@ -10,3 +10,44 @@
 .analytics-bars{height:220px;display:flex;align-items:flex-end;gap:14px;padding:18px 18px 4px;border-bottom:1px solid var(--line);background:linear-gradient(to top,rgba(236,239,232,.45),transparent)}
 .analytics-bar-col{height:100%;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px;color:var(--muted);font:10px "JetBrains Mono",monospace}.analytics-bar-col span{font-size:10px;color:var(--ink)}.analytics-bar-col small{font-size:10px}.analytics-bar{width:100%;max-width:34px;min-height:3px;border-radius:5px 5px 0 0;background:#dfe5d8}.analytics-bar.today{background:var(--lime)}
 .trend-panel{min-height:250px}.trend-chart{height:190px;display:flex;flex-direction:column;justify-content:flex-end;padding-top:12px}.trend-chart svg{width:100%;height:150px;overflow:visible;background:linear-gradient(to top,rgba(236,239,232,.45),transparent);border-bottom:1px solid var(--line)}.trend-fill{fill:rgba(200,245,106,.22);stroke:none}.trend-line{fill:none;stroke:var(--ink);stroke-width:1.8;vector-effect:non-scaling-stroke}.trend-labels{display:flex;justify-content:space-between;padding-top:8px;color:var(--muted);font:10px "JetBrains Mono",monospace}
+
+/* Product polish: calm depth, confident motion, and clearer interaction states */
+body{background:radial-gradient(circle at 88% -10%,rgba(200,245,106,.16),transparent 32%),var(--paper)}
+.app-shell{background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 42%)}
+.sidebar{position:relative;overflow:hidden;background:linear-gradient(180deg,#eef2e8 0%,#e9eee4 100%);box-shadow:8px 0 28px rgba(37,57,43,.04)}
+.sidebar:before{content:"";position:absolute;width:180px;height:180px;right:-110px;top:110px;border:1px solid rgba(135,165,72,.16);border-radius:50%;pointer-events:none}
+.side-brand,.side-label,.side-nav,.side-bottom{position:relative;z-index:1}
+.side-nav button,.side-bottom>button{transition:transform .22s ease,background .22s ease,color .22s ease,box-shadow .22s ease}
+.side-nav button:hover,.side-bottom>button:hover{transform:translateX(4px);background:rgba(255,255,255,.58);color:var(--ink)}
+.side-nav button.active{box-shadow:0 8px 18px rgba(23,37,30,.16),0 3px 0 #c7d1c0;transform:translateX(3px)}
+.app-main{background:rgba(246,246,240,.56)}
+.app-header{position:sticky;top:0;z-index:8;background:rgba(249,249,244,.78);backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(227,230,220,.72)}
+.icon-btn,.help-btn{transition:color .2s ease,transform .2s ease}.icon-btn:hover,.help-btn:hover{color:var(--ink);transform:translateY(-1px)}
+.header-avatar{box-shadow:0 0 0 4px rgba(200,245,106,.16);transition:transform .25s ease,box-shadow .25s ease}.header-avatar:hover{transform:scale(1.08) rotate(4deg);box-shadow:0 0 0 7px rgba(200,245,106,.22)}
+.screen{animation:screen-in .52s cubic-bezier(.2,.8,.2,1) both}
+.screen>*{animation:rise-in .55s cubic-bezier(.2,.8,.2,1) both}.screen>*:nth-child(2){animation-delay:.05s}.screen>*:nth-child(3){animation-delay:.1s}.screen>*:nth-child(4){animation-delay:.15s}
+@keyframes screen-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes rise-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(200,245,106,.45)}50%{box-shadow:0 0 0 7px rgba(200,245,106,0)}}
+.live-dot{animation:pulse-dot 2.4s ease-in-out infinite}
+.btn,.text-btn,.filter-icon,.editor-reset,.console-top button{transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 9px 18px rgba(23,37,30,.16)}.btn:active{transform:translateY(0);box-shadow:none}
+.panel,.stat-card,.problem-table,.problem-statement{box-shadow:0 8px 24px rgba(38,54,41,.035);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.panel:hover,.stat-card:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(38,54,41,.08);border-color:#d3dcc6}
+.stat-card strong{transition:color .25s ease}.stat-card:hover strong{color:var(--mint-dark)}
+.problem-row{transition:background .2s ease,transform .2s ease,box-shadow .2s ease}.problem-row:hover{transform:translateX(3px);box-shadow:inset 3px 0 var(--mint-dark)}
+.problem-row:hover .row-arrow{transform:translateX(4px);color:var(--mint-dark)}.row-arrow{transition:transform .2s ease,color .2s ease}
+.search-box:focus-within,.filter-bar select:focus,.range-select:focus,.language-select:focus{border-color:#a8c473;box-shadow:0 0 0 4px rgba(200,245,106,.18);outline:none}
+.search-box,.filter-bar select,.range-select{transition:border-color .2s ease,box-shadow .2s ease}
+.pill{transition:transform .2s ease,box-shadow .2s ease}.pill:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(38,54,41,.08)}
+.progress-track span,.topic-track span,.bar,.analytics-bar{transition:width .8s cubic-bezier(.2,.8,.2,1),height .8s cubic-bezier(.2,.8,.2,1)}
+.editor-panel{box-shadow:0 18px 38px rgba(23,37,30,.16);transition:box-shadow .3s ease}.editor-panel:focus-within{box-shadow:0 22px 48px rgba(23,37,30,.24),0 0 0 2px rgba(200,245,106,.28)}
+.statement-block{animation:rise-in .45s ease both}.statement-block:nth-of-type(2){animation-delay:.06s}.statement-block:nth-of-type(3){animation-delay:.12s}
+.example{transition:background .2s ease,padding .2s ease}.example:hover{background:rgba(200,245,106,.08);padding-top:4px;padding-bottom:4px}
+.console-success{animation:success-in .35s ease both}@keyframes success-in{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:none}}
+.analytics-bar.today{box-shadow:0 0 0 4px rgba(200,245,106,.12)}
+.trend-line{stroke-dasharray:180;stroke-dashoffset:180;animation:draw-line 1.2s .25s ease forwards}@keyframes draw-line{to{stroke-dashoffset:0}}
+.question summary{transition:background .2s ease,padding-left .2s ease;border-radius:6px}.question summary:hover{background:#f4f7ed;padding-left:8px}
+.auth-decoration{background:radial-gradient(circle at 50% 45%,#334a39 0,#17251e 58%);}.auth-orbit,.auth-decoration:after{animation:orbit-drift 12s ease-in-out infinite alternate}.auth-decoration:after{animation-delay:-4s}@keyframes orbit-drift{from{transform:rotate(-23deg) translate3d(-8px,5px,0)}to{transform:rotate(-18deg) translate3d(10px,-8px,0)}}
+@media(max-width:700px){.app-header{box-shadow:0 4px 14px rgba(23,37,30,.05)}.panel:hover,.stat-card:hover{transform:none}.screen>*{animation-duration:.4s}.problem-row:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
