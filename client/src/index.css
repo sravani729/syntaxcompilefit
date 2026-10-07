@@ -139,3 +139,10 @@ body{background:radial-gradient(circle at 88% -10%,rgba(200,245,106,.16),transpa
 :root:not([data-theme="dark"]) .home-page .public-nav nav button:hover,
 :root:not([data-theme="dark"]) .home-page .nav-login:hover,
 :root:not([data-theme="dark"]) .home-page .btn-ghost:hover{color:#0b1710}
+
+/* Clearwave-inspired human progress card */
+.continue-card{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:22px;padding:24px 26px;border:1px solid #dbe8dc;border-radius:18px;background:linear-gradient(105deg,#eef8ef 0%,#f9fbf5 68%,#e5f3ee 100%);box-shadow:0 12px 28px rgba(51,101,73,.06);position:relative;overflow:hidden}
+.continue-card:after{content:"";position:absolute;width:190px;height:190px;right:9%;top:-130px;border:1px solid rgba(79,153,122,.16);border-radius:50%;pointer-events:none}
+.continue-copy,.continue-side{position:relative;z-index:1}.continue-kicker{font:9px "JetBrains Mono",monospace;letter-spacing:.16em;color:#6c9a7c}.continue-copy h2{font-size:25px;letter-spacing:-.055em;margin-top:8px}.continue-copy p{font-size:11px;color:#789181;margin-top:6px}.continue-side{display:flex;align-items:center;gap:18px}.welcome-link{font-size:11px}.welcome-link svg{transition:transform .2s ease}.welcome-link:hover svg{transform:translateX(3px)}
+:root[data-theme="dark"] .continue-card{background:linear-gradient(105deg,#153149 0%,#132738 68%,#17394b 100%);border-color:#2c5870;box-shadow:0 16px 34px rgba(0,27,49,.28)}:root[data-theme="dark"] .continue-card:after{border-color:rgba(118,199,255,.2)}:root[data-theme="dark"] .continue-kicker{color:#8bcaf0}:root[data-theme="dark"] .continue-copy p{color:#a4bfd0}
+@media(max-width:700px){.continue-card{display:block;padding:20px}.continue-side{justify-content:space-between;margin-top:18px}.continue-copy h2{font-size:22px}}
