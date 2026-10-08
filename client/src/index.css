@@ -111,3 +111,7 @@ body{background:radial-gradient(circle at 88% -10%,rgba(200,245,106,.16),transpa
 
 /* Preview edit: keep the homepage Start coding label readable on its light primary surface. */
 .home-page .hero-actions .btn-primary{color:#181816}
+
+
+/* Preview edit: improve contrast for the auth form submit label. */
+:root[data-theme="dark"] .auth-page .auth-submit{color:#222220}
