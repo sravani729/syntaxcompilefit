@@ -119,3 +119,7 @@ body{background:radial-gradient(circle at 88% -10%,rgba(200,245,106,.16),transpa
 
 /* Preview edit: improve contrast for the dashboard Continue practice label. */
 :root[data-theme="dark"] .dashboard-screen .welcome-row .btn-primary{color:#151514}
+
+
+/* Preview edit: improve contrast for the Problems page Random problem label. */
+:root[data-theme="dark"] .screen-heading .btn-primary{color:#222220}
