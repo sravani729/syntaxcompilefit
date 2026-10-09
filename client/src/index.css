@@ -134,3 +134,4 @@ body{background:radial-gradient(circle at 88% -10%,rgba(200,245,106,.16),transpa
 /* Preview edit wpe_af62a95014a4144a74b72575: deepen analysis callouts in dark mode. */
 :root[data-theme="dark"] .analysis-screen .coach-card{background:#41473e}
 :root[data-theme="dark"] .analysis-screen .approach-highlight{background:#373a31}
+:root[data-theme="dark"] .analysis-screen .analysis-hero .btn-primary{background:#3b4536}
