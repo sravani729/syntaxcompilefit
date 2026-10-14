@@ -7,9 +7,10 @@ import { createServer as createViteServer } from "vite";
 import viteConfig from "../../vite.config";
 
 export async function setupVite(app: Express, server: Server) {
+  const managedPreview = Boolean(process.env.MANUS_ADDON_PREVIEW_PUBLIC_ORIGIN || process.env.MANUS_ADDON_RUNTIME_PUBLIC_ORIGIN);
   const serverOptions = {
     middlewareMode: true,
-    hmr: { server },
+    hmr: managedPreview ? { server, protocol: "wss" as const, clientPort: 443 } : { server },
     allowedHosts: true as const,
   };
 
